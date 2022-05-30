@@ -22,6 +22,11 @@ public class StringSimilarity {
         return (longerLength - editDistance(longer, shorter)) / (double) longerLength;
     }
 
+    /**
+     * Calculates the edit distance between the two strings using Levenshtein's algorithm.
+     *
+     * @return the edit distance
+     */
     public static int editDistance(String s1, String s2) {
         s1 = s1.toLowerCase();
         s2 = s2.toLowerCase();

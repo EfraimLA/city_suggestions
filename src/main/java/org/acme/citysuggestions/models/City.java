@@ -57,4 +57,7 @@ public class City {
     @Column(name = "modified_at")
     private Date modifiedAt;
 
+    @Transient
+    private Double score;
+
 }
