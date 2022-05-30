@@ -1,12 +1,20 @@
 package org.acme.citysuggestions.controllers;
 
-import org.acme.citysuggestions.StringSimilarity;
+import org.acme.citysuggestions.models.City;
+import org.acme.citysuggestions.repositories.CityRepository;
+import org.acme.citysuggestions.services.StringSimilarity;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class CitySuggestController {
+
+    @Autowired
+    CityRepository repository;
 
     /**
      * @param query     the query to search for a city
@@ -18,8 +26,6 @@ public class CitySuggestController {
     public double suggestions(@RequestParam(name = "q") String query,
                               @RequestParam(required = false) String latitude,
                               @RequestParam(required = false) String longitude) {
-
-
 
 
         return StringSimilarity.score("43.70011", latitude);
