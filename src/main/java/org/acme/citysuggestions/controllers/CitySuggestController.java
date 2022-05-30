@@ -1,5 +1,6 @@
 package org.acme.citysuggestions.controllers;
 
+import org.acme.citysuggestions.StringSimilarity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,11 +15,14 @@ public class CitySuggestController {
      * @return the city name
      */
     @GetMapping("/suggestions")
-    public String suggestions(@RequestParam(name = "q") String query,
+    public double suggestions(@RequestParam(name = "q") String query,
                               @RequestParam(required = false) String latitude,
                               @RequestParam(required = false) String longitude) {
 
-        return "New York";
+
+
+
+        return StringSimilarity.score("43.70011", latitude);
     }
 
 }
