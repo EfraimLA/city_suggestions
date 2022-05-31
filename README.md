@@ -2,7 +2,7 @@
 
 **Examples**
 
-Using curl to testing the REST Endpoint
+Using curl to test the REST Endpoint
 
 Get suggestions only with the name of the city
 
