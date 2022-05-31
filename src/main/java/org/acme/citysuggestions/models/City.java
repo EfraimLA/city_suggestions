@@ -27,7 +27,7 @@ public class City {
     private String longitude;
 
     @Column(name = "feat_class")
-    private String featClass;
+    private Character featClass;
 
     @Column(name = "feat_code")
     private String featCode;
